@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Datei hochladen</title>
+</head>
+<body>
+  <h1>Datei hochladen</h1>
+  <p>Bitte wähle die 3D-Datei aus, die du drucken lassen möchtest.</p>
+
+  <form action="upload.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="datei">
+    <input type="submit" value="Hochladen">
+  </form>
+</body>
+</html>
