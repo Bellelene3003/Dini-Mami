@@ -24,45 +24,59 @@ h1 {
 <head>
   <title>Bild-Diashow</title>
   <style>
-    #diashow {
-      width: 100%;
-      height: 300px;
-      overflow: hidden;
-    }
+    .slideshow {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 
-    #diashow img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+.slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    #diashow div {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      animation: fade 3s infinite;
-    }
+.slideshow img:nth-child(1) {
+  animation: fade 3s infinite alternate;
+  animation-delay: 0s;
+}
 
-    @keyframes fade {
-      0% {
-        opacity: 0;
-      }
+.slideshow img:nth-child(2) {
+  animation: fade 3s infinite alternate;
+  animation-delay: 1s;
+}
 
-      100% {
-        opacity: 1;
-      }
-    }
+.slideshow img:nth-child(3) {
+  animation: fade 3s infinite alternate;
+  animation-delay: 2s;
+}
+
+.slideshow img:nth-child(4) {
+  animation: fade 3s infinite alternate;
+  animation-delay: 3s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
   </style>
 </head>
 <body>
-  <div id="diashow">
-    <div><img src="images/vase.jpg"></div>
-    <div><img src="images/figuren.jpg"></div>
-    <div><img src="images/wekzeuge.jpg"></div>
-    <div><img src="images/ersatzteile.jpg"></div>
-  </div>
+  <div class="slideshow">
+  <img src="bild1.jpg" alt="Bild 1">
+  <img src="bild2.jpg" alt="Bild 2">
+  <img src="bild3.jpg" alt="Bild 3">
+  <img src="bild4.jpg" alt="Bild 4">
+ </div>
 </body>
 
 
